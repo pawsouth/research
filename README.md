@@ -1,6 +1,12 @@
 # research
 ### Markdown cheat-sheet))
-https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
+https://bulldogjob.com/news/449-how-to-write-a-good-readme-for-your-github-project
+Template 
+https://github.com/ritaly/README-cheatsheet/blob/master/README.md
+## To Do Next
+- Import from txt file
+
+
 
 ## TOC
 * [DNS Records](#dns-records)
@@ -32,6 +38,23 @@ A sender policy framework (SPF) records guide - https://www.cloudflare.com/learn
 grep -wv <word> <filename>
 grep -wv -e <word1> -e <word2> <filename>
 grep -wv 'nologin\|bash' /etc/passwd
+  
+### How to find IP behind WAF
+https://geekflare.com/find-real-ip-origin-address-of-website/
+  
+### MISC DNS Tools
+https://securitytrails.com/
+https://www.prepostseo.com/
+https://dns-history.whoisxmlapi.com/overview
+https://suip.biz/?act=domainiphistory
+  
+## OSINT (almost)
+
+### Leaked data  
+https://search.ddosecrets.com/data/  
+https://ddosecrets.com/wiki/Special:AllPages
+https://share.vx-underground.org/
+  
   
 ## Port scanning  
 ### List of interesting ports
