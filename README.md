@@ -20,6 +20,14 @@ whois <domain name>
 dig @<NS IP> -t AXFR <domain name>
 host -t txt <domain name>
 ```
+
+## DNS History
+https://securitytrails.com/
+https://suip.biz/?act=domainiphistory
+https://dns-history.whoisxmlapi.com/overview
+
+
+
 ### TXT records
 ```sh
 host -t txt <domain name>
@@ -38,6 +46,20 @@ A sender policy framework (SPF) records guide - https://www.cloudflare.com/learn
 grep -wv <word> <filename>
 grep -wv -e <word1> -e <word2> <filename>
 grep -wv 'nologin\|bash' /etc/passwd
+  
+## WAF check:
+nmap -p80,443 --script http-waf-detect --script-args="http-waf-detect.aggro,http-waf-detect.detectBodyChanges" -iL ./patr-hosts.txt
+
+ ## Vuln check
+nmap -Pn -sV -p21,22,53,80,443 --script=vulners -iL ./patr-hosts.txt
+
+nikto -h ./hosts-80.txt > patriarchia-hikto.txt
+
+nikto -h <domain/ip> -Format msf+
+
+https://cdn.comparitech.com/wp-content/uploads/2019/07/NIkto-Cheat-Sheet.pdf
+https://www.tutorialspoint.com/nmap-cheat-sheet
+
   
 ### How to find IP behind WAF
 https://geekflare.com/find-real-ip-origin-address-of-website/
