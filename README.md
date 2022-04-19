@@ -39,6 +39,16 @@ https://securitytrails.com/
 https://www.prepostseo.com/
 https://dns-history.whoisxmlapi.com/overview
 https://suip.biz/?act=domainiphistory
+## Web Application enumeration
+https://github.com/OJ/gobuster
+  gobuster dir -u http://10.10.10.121/ -w /usr/share/dirb/wordlists/common.txt
+  https://github.com/danielmiessler/SecLists
+  git clone https://github.com/danielmiessler/SecLists
+  sudo apt install seclists -y
+  Next, add a DNS Server such as 1.1.1.1 to the /etc/resolv.conf file.
+  gobuster dns -d inlanefreight.com -w /usr/share/SecLists/Discovery/DNS/namelist.txt
+
+  
 ## Site protection
 DDoS
 ### WAF Check
@@ -70,6 +80,9 @@ nikto -h ./hosts-80.txt > patriarchia-hikto.txt
 nikto -h <domain/ip> -Format msf+
 
 ## Exploits found
+  
+  ## SNPM
+  https://github.com/trailofbits/onesixtyone
 
 ## Host user accounts  
 ### Leaked data  
